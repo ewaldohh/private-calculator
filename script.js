@@ -6,7 +6,7 @@ function calculate() {
     let stopLoss = document.getElementById("stop-loss").value;
 
     //Variabel Menyimpan perhitungan
-    let rpt = Number(initalBalance) * Number(risk); //100 * 0.1 = 10
+    let rpt = Number(initalBalance) * Number(risk/100); //100 * 0.1 = 10
     let pips = 0;
 
     if(openPrice > stopLoss) {
@@ -24,3 +24,8 @@ function calculate() {
     document.getElementById('lot').innerHTML = lot;
     return false;
 } 
+
+function sliderValue() {
+    let slider = document.getElementById("risk").value;
+    document.getElementById("sliderLabel").innerHTML = slider + " %";
+}

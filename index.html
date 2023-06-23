@@ -20,13 +20,14 @@
         <div class="column bg-color">
             <form>
                 <label class="first-label">Initial Balance:</label><br>
-                <input type="number" placeholder="0" id="initial-balance" value="100"><br>
+                <input type="number" placeholder="0" id="initial-balance"><br>
                 <label>Risk Per Trade:</label><br>
-                <input type="range" class="slider" id="risk" value="0.1"><br>
+                <input type="range" class="slider" id="risk"  min="0" max="100" value="50" oninput="sliderValue()" onchange="sliderValue()">
+                <label class="slider-label" id="sliderLabel">50 %</label>
                 <label>Open Position Price:</label><br>
-                <input type="number" placeholder="0" id="open-price" value="1.07983"><br>
+                <input type="number" placeholder="0" id="open-price"><br>
                 <label>Stop Loss Price:</label><br>
-                <input class="last-input" type="number" placeholder="0" id="stop-loss" value="1.07963"><br>
+                <input class="last-input" type="number" placeholder="0" id="stop-loss"><br>
                 <button class="button-style" onclick="return calculate()">Calculate</button><br>
                 <div class="max-label">
                     <label>Maximul Lot:</label><br>

@@ -38,7 +38,7 @@
 
 .slider {
     -webkit-appearance: none;
-    width: 384.28px;
+    width: 300px;
     height: 20px;
     border-radius: 10px;
     background: #d3d3d3;
@@ -129,5 +129,11 @@ input[type=number] {
     margin-left: -20px;
     font-weight: bold;
     font-size: 20px;
+}
+
+.slider-label {
+  font-weight: bold;
+  position: relative;
+  top: -3px;
 }
   
